@@ -3,9 +3,11 @@
 
 #define NUM 10000
 
-char *my_fgets(char *s, int n, FILE *fp){
+char *my_fgets(char *s, int n, FILE *fp)
+{
     char *const head = s;
-    for (; n > 1; n--) {
+    for (; n > 1; n--) 
+    {
         int c = fgetc(fp);
         if (c == EOF)
             break;
@@ -21,9 +23,11 @@ char *my_fgets(char *s, int n, FILE *fp){
 }
 
 
-int main(){	
+int main()
+{	
 	char str[NUM];	
-	while(my_fgets(str, 4,stdin)!=NULL){		
+	while(my_fgets(str, 4,stdin)!=NULL)
+	{		
 		printf("%s",str);
 		fputs(str,stdout);
 	}
